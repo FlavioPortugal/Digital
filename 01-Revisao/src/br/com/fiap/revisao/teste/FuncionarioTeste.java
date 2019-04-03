@@ -1,39 +1,24 @@
 package br.com.fiap.revisao.teste;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-
 import br.com.fiap.revisao.bean.Funcionario;
-import br.com.fiap.revisao.bean.Genero;
+import br.com.fiap.revisao.bean.Gerente;
 
 public class FuncionarioTeste {
 
 	public static void main(String[] args) {
-		//Instanciar um funcionário
-		Funcionario func = new Funcionario("Fernando");
-		//Atribuir uma data de admissão
-		Calendar data = Calendar.getInstance();//DATA ATUAL
-		Calendar data2 = new GregorianCalendar(2018, Calendar.JANUARY, 20);
-		func.setDataAdmissao(data);
+		Funcionario f = new Gerente();
+		f.setSalario(900);
 		
-		//objeto para formatar a data
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		//exibir a data			
-		System.out.println(sdf.format(data2.getTime()));
+		Gerente g = (Gerente) f; //cast alterar o tipo de dado
 		
-		//exibir o genero
-		System.out.println(func.getGenero());
+		System.out.println(f.calcularBonificacao());
 		
-		//atribuir um valor para o genero
-		func.setGenero(Genero.MASCULINO);
+		String salario = (f.getSalario()>1000)?"Maior":"Menor";
 		
+		System.out.println(salario);
+				
 	}
-
+	
 }
-
-
-
-
 
 

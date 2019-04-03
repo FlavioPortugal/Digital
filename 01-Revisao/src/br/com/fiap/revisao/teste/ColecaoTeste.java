@@ -7,48 +7,50 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import br.com.fiap.revisao.bean.Funcionario;
-import br.com.fiap.revisao.bean.Pessoa;
-
 public class ColecaoTeste {
 
-	public static void main(String args[]) {
-		//criar uma lista
-		List<Pessoa> lista = new ArrayList<Pessoa>();
-		
-		//adicionar elementos na lista
-		lista.add(new Funcionario("Thiago"));
-		lista.add(new Pessoa("Rodrigo"));
-		
+	public static void main(String[] args) {
+		//Lista
+		List<String> lista = new ArrayList<String>();
+		//adicionar dados na lista
+		lista.add("Ola mundo");
+		lista.add("Hello world");
+		lista.add("Hallo Welt");
+		//recuperar uma posição específica
+		System.out.println(lista.get(2)); 
 		//percorrer a lista
-		System.out.println("LIST");
-		for (Pessoa p : lista) {
-			System.out.println(p.getNome());			
+		for (String item : lista) {
+			System.out.println(item);
 		}
-		
-		//criar um set e adicionar valores
-		Set<String> set = new HashSet<>();
-		set.add("Alice");
-		set.add("Rafael");
-		set.add("Rafael");
 		
 		System.out.println("SET");
-		for (String s : set) {
-			System.out.println(s);
+		Set<String> set = new HashSet<>();
+		//adicionar valores no set
+		set.add("Lasanha");
+		set.add("Lasanha");
+		set.add("Pizza");
+		//exibir os elementos do set
+		for (String item : set) {
+			System.out.println(item);
 		}
 		
-		//criar um map
-		Map<String, Pessoa> map = new HashMap<>();
-		//adicionar valores para o mapa
-		map.put("gerente", new Funcionario("Rita"));
-		map.put("cliente", new Pessoa("Ronaldo"));
-		
+		//MAP<Chave,Valor>
 		System.out.println("MAP");
-		Pessoa p = map.get("gerente");
-		System.out.println(p.getNome());
+		Map<String,String> mapa = new HashMap<>(); 
 		
+		mapa.put("brasil", "brasilia");
+		mapa.put("argentina", "buenos aires");
+		mapa.put("italia", "roma");
+		
+		System.out.println(mapa.get("italia"));
 	}
-
+	
 }
+
+
+
+
+
+
 
 

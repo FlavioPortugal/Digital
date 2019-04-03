@@ -1,5 +1,0 @@
-2019-02-19 08:43:58 WARN  TerminalConsulta:18 - Início da aplicação
-2019-02-19 08:44:05 DEBUG EstoqueBO:12 - Pesquisando por produto de código 401
-2019-02-19 08:44:10 DEBUG EstoqueBO:12 - Pesquisando por produto de código 0
-2019-02-19 08:44:10 ERROR TerminalConsulta:42 - Código não existente
-2019-02-19 08:44:10 WARN  TerminalConsulta:48 - Final da aplicação
